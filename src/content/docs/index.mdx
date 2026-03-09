@@ -1,40 +1,38 @@
 ---
-title: Welcome to Starlight
-description: Get started building your docs site with Starlight.
-template: splash # Remove or comment out this line to display the site sidebar on this page.
+title: D2 Documentation
+description: Documentation for D2 — an autonomous AI agent for Developer Advocacy built on Cloudflare Workers.
+template: splash
 hero:
-  tagline: Congrats on setting up a new Starlight project!
-  image:
-    file: ../../assets/houston.webp
+  tagline: An autonomous DevRel agent built on Cloudflare Workers, Agents SDK, and Durable Objects.
   actions:
-    - text: Example Guide
-      link: /guides/example/
+    - text: Get Started
+      link: /guides/introduction/
       icon: right-arrow
-    - text: Read the Starlight docs
-      link: https://starlight.astro.build
+    - text: Architecture Overview
+      link: /architecture/overview/
       icon: external
       variant: minimal
 ---
 
 import { Card, CardGrid } from '@astrojs/starlight/components';
 
-## Next steps
+## Core Concepts
 
 <CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
+	<Card title="Workers Pipeline" icon="rocket">
+		D2 runs as a set of interconnected Cloudflare Workers communicating via Service Bindings.
+		Each module — ingest, analysis, content engine, feedback — deploys independently.
 	</Card>
-	<Card title="Change page layout" icon="document">
-		Delete `template: splash` in `src/content/docs/index.mdx` to display a
-		sidebar on this page.
+	<Card title="Durable Objects" icon="seti:db">
+		Persistent state management for conversation tracking, feedback aggregation, and content
+		planning. WebSocket support powers the real-time dashboard.
 	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
+	<Card title="Workers AI" icon="star">
+		On-edge inference for sentiment analysis, trend detection, and content generation.
+		No external API calls or cold starts.
 	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the Starlight Docs](https://starlight.astro.build/).
+	<Card title="Microfrontends" icon="puzzle">
+		Multiple independent apps served from one domain — marketing site, blog, docs, and
+		dashboard — each built with different frameworks.
 	</Card>
 </CardGrid>

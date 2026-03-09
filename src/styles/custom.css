@@ -1,0 +1,34 @@
+/* D2 Docs — Custom Starlight theme overrides */
+
+:root {
+	--sl-font: "JetBrains Mono", "SF Mono", ui-monospace, monospace;
+	--sl-font-mono: "JetBrains Mono", "SF Mono", ui-monospace, monospace;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&display=swap');
+
+/* Dark theme accent colors matching the D2 brand */
+:root[data-theme='dark'] {
+	--sl-color-accent-low: #0d1f33;
+	--sl-color-accent: #6eb5ff;
+	--sl-color-accent-high: #c4dcf5;
+	--sl-color-white: #e8e8e8;
+	--sl-color-gray-1: #e8e8e8;
+	--sl-color-gray-2: #aaa;
+	--sl-color-gray-3: #555;
+	--sl-color-gray-4: #2a2a2a;
+	--sl-color-gray-5: #1a1a1a;
+	--sl-color-gray-6: #0f0f0f;
+	--sl-color-black: #050505;
+	--sl-color-bg-nav: #0a0a0a;
+	--sl-color-bg-sidebar: #0a0a0a;
+	--sl-color-hairline-light: #1a1a1a;
+	--sl-color-hairline: #1a1a1a;
+}
+
+/* Light theme — keep it dark-leaning too */
+:root[data-theme='light'] {
+	--sl-color-accent-low: #e8f0fb;
+	--sl-color-accent: #3b82f6;
+	--sl-color-accent-high: #1a3a5c;
+}
